@@ -14,6 +14,9 @@
 		AF2A177C2A4AFD3700AD5D34 /* CalculaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A177B2A4AFD3700AD5D34 /* CalculaterTests.swift */; };
 		AF2A17862A4AFD3700AD5D34 /* CalculaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A17852A4AFD3700AD5D34 /* CalculaterUITests.swift */; };
 		AF2A17882A4AFD3700AD5D34 /* CalculaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A17872A4AFD3700AD5D34 /* CalculaterUITestsLaunchTests.swift */; };
+		AF2A17952A4B03AC00AD5D34 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A17942A4B03AC00AD5D34 /* NumberButtonView.swift */; };
+		AF2A17972A4B6D6100AD5D34 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A17962A4B6D6100AD5D34 /* ButtonView.swift */; };
+		AF9637862A56CE240013134A /* Eval in Frameworks */ = {isa = PBXBuildFile; productRef = AF9637852A56CE240013134A /* Eval */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		AF2A17812A4AFD3700AD5D34 /* CalculaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2A17852A4AFD3700AD5D34 /* CalculaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaterUITests.swift; sourceTree = "<group>"; };
 		AF2A17872A4AFD3700AD5D34 /* CalculaterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF2A17942A4B03AC00AD5D34 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
+		AF2A17962A4B6D6100AD5D34 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9637862A56CE240013134A /* Eval in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +102,9 @@
 			children = (
 				AF2A176A2A4AFD3500AD5D34 /* CalculaterApp.swift */,
 				AF2A176C2A4AFD3500AD5D34 /* ContentView.swift */,
+				AF2A17962A4B6D6100AD5D34 /* ButtonView.swift */,
 				AF2A176E2A4AFD3600AD5D34 /* Assets.xcassets */,
+				AF2A17942A4B03AC00AD5D34 /* NumberButtonView.swift */,
 				AF2A17702A4AFD3600AD5D34 /* Preview Content */,
 			);
 			path = Calculater;
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = Calculater;
+			packageProductDependencies = (
+				AF9637852A56CE240013134A /* Eval */,
+			);
 			productName = Calculater;
 			productReference = AF2A17672A4AFD3500AD5D34 /* Calculater.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = AF2A175E2A4AFD3500AD5D34;
+			packageReferences = (
+				AF9637842A56CE240013134A /* XCRemoteSwiftPackageReference "SwiftEval" */,
+			);
 			productRefGroup = AF2A17682A4AFD3500AD5D34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +273,8 @@
 			files = (
 				AF2A176D2A4AFD3500AD5D34 /* ContentView.swift in Sources */,
 				AF2A176B2A4AFD3500AD5D34 /* CalculaterApp.swift in Sources */,
+				AF2A17972A4B6D6100AD5D34 /* ButtonView.swift in Sources */,
+				AF2A17952A4B03AC00AD5D34 /* NumberButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF9637842A56CE240013134A /* XCRemoteSwiftPackageReference "SwiftEval" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/SwiftEval?ref=iosexample.com";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF9637852A56CE240013134A /* Eval */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9637842A56CE240013134A /* XCRemoteSwiftPackageReference "SwiftEval" */;
+			productName = Eval;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF2A175F2A4AFD3500AD5D34 /* Project object */;
 }
